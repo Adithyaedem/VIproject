@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgb(7, 11, 30);
+        }
+        nav{
+            width:100%;
+            height: 11vh;
+            background-color:transparent;
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+            position:relative;
+            gap: 5px;
+            position: fixed;
+            z-index: 1;
+            padding: 24px 0px;
+        }
+         .logo h1{
+            color: white;
+            font-size: 24px;
+            font-family: sans-serif;
+            left: 8px;
+            height: 100%;
+            position: absolute;
+            top: 30px;
+            padding-left: 10px;
+        }
+        .logo span{
+            color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+        }
+        .con1{
+            width: 55%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            bottom: 4px;
+            padding-left: 100px;
+            padding-bottom:10px;
+        }
+        .con1 a{
+            font-size: 15px;
+            color: white;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+        nav .con2{
+            width:15%;
+            height: 60%;
+            padding-right: 2%;
+            padding-bottom: 13px;
+            align-items:end;
+            gap:15px;
+            display: flex;
+            flex-direction: row;
+        
+        }
+        .con2 .login{
+            background-color: transparent;
+            color: white;
+            height: 80%;
+            width:50%;
+            border: none;
+        }
+        .con2 .buy{
+            width: 90px;
+            height: 40px;
+            border-radius:12px;
+            background-color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+            color: white;
+            border: none;
+        }
+        .main{
+            padding-top: 90px;
+            width:100%;
+            height:89vh;
+            background-image:radial-gradient(rgb(160 135 260 / var(--tw-text-opacity, 1)),black);
+            display: flex;
+            
+        }
+        .main .left{
+            width:500px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+        }
+        .main .left .top{
+            width: 278.78px;
+            height:32px;
+            background-color:transparent;
+            margin: 0px 0px 20px;
+            padding: 6px 16px;
+             border:1px solid grey;
+             gap: 5px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-direction: row;
+             border-radius: 50px;
+        }
+        .main .left .top .c{
+            font-size: 12px;
+            font-family: sans-serif;
+            color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+
+        }
+        .main .left .top p{
+            font-size: 12px;
+            font-family: sans-serif;
+            color: white;
+        }
+        .main .left .top i{
+            color: white;
+        }
+        .main .left .h{
+            width:600px ;
+            height: 180px;
+            margin: 0px 0px 24px;
+
+        }
+        .main .left .h .t{
+            color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+            font-size: 60px;
+            font-family: sans-serif;
+            
+        }
+        .main .left .h span{
+            color: white;
+            font-size: 60px;
+            font-family: sans-serif;
+        }
+        .left .e{
+            width:490px;
+            height: 56px;
+            margin: 0px 0px 32px;
+        }
+        .left .e p{
+            font-size: 18px;
+            font-family: sans-serif;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .left .buttons{
+            width: 491px;
+            height: 49.33px;
+            display: flex;
+            gap: 15px;
+        }
+        .left .buttons .start{
+            width: 168.67px;
+            height: 48px;
+            background-color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+        }
+        .left .buttons .view{
+            width: 176.16px;
+            height: 48px;
+            background-color:black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+             display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .left .buttons i{
+            color: white;
+        }
+        .left .last{
+            width:500px;
+            height:52px;
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            margin: 32px 0px 0px;
+        }
+        .left .last .a,.b,.d{
+            width:98px;
+            height:52px;
+            border-right: 1px solid gray;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            padding-right: 20px;
+        } 
+        .left .last .a,.b,.d h1{
+            color: white;
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        .left .last .a,.b,.d p{
+            color: rgb(216, 218, 218);
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+        .main .right{
+            width:500px;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 150px;
+            padding-bottom: 50px;
+        }
+        .right .center{
+            width:470px;
+            height:350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .right .center .img1{
+             width: 420px;
+            height:299px;
+        }
+        .right .center .img1 img{
+            width: 420px;
+            height:299px;
+            display: flex;
+            position: relative;
+            border-radius: 10px;
+        }
+        .right .center .topleft{
+            width:175px;
+            height:78px;
+            background-color:#9B87F533;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #9B87F533;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            backdrop-filter: blur(10px); 
+            top: 0px;
+            left:0px;
+        }
+        .right .center .topleft .security img{
+            width: 40px;
+            height: 40px;
+            padding-left: 20px;
+            color:#13d1db33;
+        }
+        .right .center .topleft .enterprise p{
+            font-size:12px ;
+            font-family: sans-serif;
+            color:#5f6367;
+        }
+        .right .center .topleft .enterprise span{
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+        .right .center .bottomright{
+            width:175px;
+            height:78px;
+            border: 1px solid #9B87F533;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-color: #9B87F533;
+            border-radius: 10px;
+            backdrop-filter: blur(10px); 
+            bottom: 0px;
+            right:0px;
+        }
+        .right .center .bottomright .graph{
+            width: 40px;
+            height: 40px;
+
+        }
+        .right .center .bottomright .graph img{
+            width: 40px;
+            height: 40px;
+            padding-left: 20px;
+        }
+        .right .center .bottomright .data p{
+            font-size:12px ;
+            font-family: sans-serif;
+            color:#9CA3AF;
+            padding-left: 20px;
+        }
+        .right .center .bottomright .data span{
+             font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color:#22C55E;
+        }
+        .features{
+            width:100%;
+            height:900px;
+            display:flex;
+            padding-top: 96px;
+            flex-direction: column;
+            padding: 96px 0px;
+        }
+        .features .content{
+
+            height:104px;
+            margin-bottom:64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .features .content h2{
+            font-size: 36px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color:rgb(155 135 245 / var(--tw-text-opacity, 1));
+            margin-bottom: 16px;
+        }
+        .features .content .para1{
+            width: 672px;
+            height:48px;
+            margin: 0px 155px;
+            text-align: center;
+        }  
+        .features .content .para1 p{
+            font-size: 16px;
+            font-family: sans-serif;
+            color:#9CA3AF;
+        }
+        .features .grid{
+            
+            height: 490px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 33px;
+            margin: 0px 16px;
+        }
+        .features .grid>div{
+            background-color:rgb(29, 27, 27);
+            border-radius: 10px;
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .features .grid #aa{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .features .grid #aa .aaa{
+            width: 306px;
+            height:200px;
+            padding: 24px;
+        }
+        .features .grid #aa .aaa .analysis{
+            width: 40px;
+            height: 40px;
+            margin-bottom:20px;
+            background-color: rgb(28, 37, 88);
+            border-radius: 5px;
+        }
+        .features .grid #aa div img{
+            width: 40px;
+            height: 40px;
+        }
+        .features .grid #aa h3{
+            width: 256px;
+            height: 28px;
+            font-size:20px;
+            font-family:sans-serif;
+            color:white;
+            margin:0px 0px 20px;
+        }
+        .features .grid #aa p{
+            font-size:16px;
+            font-family:sans-serif;
+            color:#9CA3AF;
+            width: 256px;
+            height: 72px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Crypto<span>Flow</span> 
+            </h1>
+        </div>
+        <div class="con1">
+            <a href="features">Features</a>
+            <a href="howitworks">How it works</a>
+            <a href="Testimonials">Testimonials</a>
+            <a href="Pricing">Pricing</a>
+            <a href="FAQ">FAQ</a>
+        </div>
+        <div class="con2">
+            <button class="login">Login</button>
+            <button class="buy">Buy Now</button>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="left">
+            <div class="top">
+            <p class="c">New Feature</p>
+            <p>AI-Powered Trading Signals</p><i class="fa-solid fa-angle-right"></i></i></div>
+            <div class="h">
+                <h1 class="t">Trade Crypto <span>with Confidence & Clarity</span></h1>
+            </div>
+            <div class="e"><p>Experience seamless cryptocurrency trading with real-time analytics, AI-powered insights, and zero commission fees.</p>
+            </div>
+            <div class="buttons">
+                <button class="start">Start Trading<i class="fa-solid fa-arrow-right"></i></button>
+                <button class="view">View Demo<i class="fa-solid fa-arrow-up-right-from-square"></i></i></button>    
+            </div>
+            <div class="last">
+                <div class="a"><h1>$2.5B+</h1><p>Trading Volume</p></div>
+                <div class="b"><h1>120K+</h1><p>Active Traders</p></div>
+                <div class="d"><h1>50+</h1><p>Global Markets</p></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="center"><div class="img1"><img src="img.avif" alt=""></div>
+                <div class="topleft">
+                    <div class="security"><img src="security.svg" alt=""></div>
+                    <div class="enterprise"><p>Security Level <span>Enterprise</span></p></div>
+                </div>
+                <div class="bottomright">
+                    <div class="graph"><img src="graph.svg" alt=""></div>
+                    <div class="data"><p>24h Change <span>+12.34%</span></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="content">
+            <h2>Powerful Features</h2>
+            <div class="para1">
+                <p>CryptoFlow gives you the edge with advanced tools designed for both beginners and professional traders.</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div id="aa">
+                <div class="aaa">
+                <div class="analysis"><img src="analysis.svg" alt=""></div>
+                <h3>Real-time Analytics</h3>
+                <p>Monitor market movements with advanced charts and indicators updated in real-time.</p>
+                </div>
+            </div>
+            <div id="bb"></div>
+            <div id="cc"></div>
+            <div id="dd"></div>
+            <div id="ee"></div>
+            <div id="ff"></div>
+        </div>
+    </div>
+</body>
+</html>
